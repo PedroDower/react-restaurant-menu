@@ -1,12 +1,21 @@
 import "./App.css"
+import { CompanyBanner } from "./components/company-banner/CompanyBanner"
 import { Counter } from "./components/counter/Counter"
 import { Quotes } from "./components/quotes/Quotes"
+import { RestaurantMenu } from "./components/RestaurantMenu/RestaurantMenu"
+import { TopNavBar } from "./components/top-nav-bar/TopNavBar"
 import logo from "./logo.svg"
 
 const App = () => {
   return (
     <div className="App">
       <header className="App-header">
+        <TopNavBar></TopNavBar>
+
+        <CompanyBanner></CompanyBanner>
+
+        <RestaurantMenu></RestaurantMenu>
+        
         <img src={logo} className="App-logo" alt="logo" />
         <Counter />
         <p>
