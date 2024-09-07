@@ -3,16 +3,16 @@ import { MenuCategoryItems } from "./MenuCategoryItems/MenuCategoryItems";
 import { MenuItemSearch } from "./MenuItemSearch/MenuItemSearch";
 
 export const RestaurantMenu = () => {
-    return (
-      <>
-        <MenuItemSearch></MenuItemSearch>
+  return (
+    <>
+      <MenuItemSearch></MenuItemSearch>
 
-        <MenuCategories></MenuCategories>
+      <MenuCategories></MenuCategories>
 
-        <MenuCategoryItems></MenuCategoryItems>
+      <MenuCategoryItems></MenuCategoryItems>
 
-        <a href="#">View allergy information</a>
-      </>
+      <a href="#">View allergy information</a>
+    </>
   );
 }
   
