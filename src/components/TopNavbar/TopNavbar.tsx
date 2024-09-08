@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-export const TopNavBar = () => {
+export const TopNavbar = () => {
   return (
     <nav>
       <ul>

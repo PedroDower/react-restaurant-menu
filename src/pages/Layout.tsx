@@ -1,10 +1,10 @@
 import { Outlet } from "react-router-dom";
-import { TopNavBar } from "../components/top-nav-bar/TopNavBar";
+import { TopNavbar } from "../components/TopNavbar/TopNavbar";
 
 export const Layout = () => {
   return (
     <>
-      <TopNavBar></TopNavBar>
+      <TopNavbar></TopNavbar>
 
       <Outlet />
     </>
