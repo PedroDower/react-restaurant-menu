@@ -6,6 +6,13 @@ export default defineConfig({
   plugins: [react()],
   server: {
     open: true,
+    proxy: {
+      "/api": {
+        target: "https://cdn-dev.preoday.com",
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, ""),
+      },
+    }
   },
   test: {
     globals: true,
