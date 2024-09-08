@@ -1,12 +1,15 @@
-export const MenuCategory = () => {
+import { IMenuCategory } from "../menuCategoriesSlice";
+interface MenuCategoryProps {
+  category: IMenuCategory;
+}
+
+export const MenuCategory: React.FC<MenuCategoryProps> = ({ category }) => {
   return (
-    <ul>
-      <li>
-        <h3>
-          <img src="" alt="" aria-hidden="true" />
-          <span>Burguers</span>
-        </h3>
-      </li>
-    </ul>
+    <h3>
+      <button>
+        <img src={ category.imageURL } aria-hidden="true" />
+        <span>{ category.name }</span>
+      </button>
+    </h3>
   );
 }

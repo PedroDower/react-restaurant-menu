@@ -1,20 +1,32 @@
 import { MenuCategory } from "./Category/MenuCategory";
-import { select, selectSelectedCategory } from "./menuCategoriesSlice";
+import { fetchCategories, selectCategoriesStatus, selectCategoryList, selectSelectedCategory } from "./menuCategoriesSlice";
 import { useAppDispatch, useAppSelector } from "../../../app/hooks";
-
-const categories: string[] = [];
+import { useEffect } from "react";
 
 export const MenuCategories = () => {
   const selected = useAppSelector(selectSelectedCategory);
+  const status = useAppSelector(selectCategoriesStatus);
+  const categories = useAppSelector(selectCategoryList);
+
   const dispatch = useAppDispatch();
 
-  // dispatch(select())
+  useEffect(() => {
+    if (status === 'idle') {
+      dispatch(fetchCategories())
+    }
+  }, [status, dispatch])
+
+  if (!categories) {
+    return <p>No menu item found!</p>
+  }
 
   return (
-    <>
+    <ul>
       {categories.map(category => (
-        <MenuCategory></MenuCategory>
+        <li key={category.id}>
+          <MenuCategory category={category}></MenuCategory>
+        </li>
       ))}
-    </>
+    </ul>
   );
 }
