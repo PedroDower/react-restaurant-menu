@@ -1,15 +1,24 @@
+import React from "react";
 import { MenuItem } from "./MenuItem/MenuItem";
+import { IMenuCategory } from "../Categories/menuCategoriesSlice";
 
-export const MenuCategoryItems = () => {
+interface IMenuCategoryItemsProps {
+  category: IMenuCategory;
+}
+
+export const MenuCategoryItems: React.FC<IMenuCategoryItemsProps> = ({ category }) => {
+  
   return (
-    <>
+    <section>
       <header>
-        <h4>Burguers</h4>
+        <h4>{ category.name }</h4>
         <button>toggle</button>
       </header>
 
-      <MenuItem></MenuItem>
-    </>
+      {category.items.map(item => (
+        <MenuItem menuItem={item} key={item.id}></MenuItem>
+      ))}
+    </section>
   );
 }
   

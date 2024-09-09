@@ -10,10 +10,19 @@ export interface CategorySelectorState {
 }
 
 export interface IMenuCategory {
-  id: string,
+  id: number,
   name: string;
   imageURL: string;
-  items: any;
+  items: IMenuItem[];
+}
+
+export interface IMenuItem {
+  id: number;
+  name: string;
+  description: string;
+  price: number;
+  position: number;
+  imageURL: string;
 }
 
 const initialState: CategorySelectorState = {
