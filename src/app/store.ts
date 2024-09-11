@@ -3,7 +3,7 @@ import { combineSlices, configureStore } from "@reduxjs/toolkit"
 import { setupListeners } from "@reduxjs/toolkit/query"
 import { counterSlice } from "../components/counter/counterSlice"
 import { quotesApiSlice } from "../components/quotes/quotesApiSlice"
-import { categorySelectorSlice } from "../components/RestaurantMenu/Categories/menuCategoriesSlice"
+import { categorySelectorSlice } from "../features/restaurant-menu/menuSlice"
 
 // `combineSlices` automatically combines the reducers using
 // their `reducerPath`s, therefore we no longer need to call `combineReducers`.

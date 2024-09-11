@@ -1,6 +1,5 @@
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { RootState } from '../../../app/store';
-import { fetchJSON } from "../../../utils/fetch-json";
+import { fetchJSON } from "../../utils/fetch-json";
 
 
 export interface CategorySelectorState {

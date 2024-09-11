@@ -1,9 +1,9 @@
 import React from "react";
-import { MenuItem } from "./MenuItem/MenuItem";
-import { IMenuCategory } from "../Categories/menuCategoriesSlice";
+import { IMenuCategory } from "./menuSlice";
+import { MenuItem } from "./MenuItem";
 
 interface IMenuCategoryItemsProps {
-  category: IMenuCategory;
+  category: IMenuCategory
 }
 
 export const MenuCategoryItems: React.FC<IMenuCategoryItemsProps> = ({ category }) => {

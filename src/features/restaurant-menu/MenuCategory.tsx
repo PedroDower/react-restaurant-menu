@@ -1,4 +1,5 @@
-import { IMenuCategory } from "../menuCategoriesSlice";
+import { IMenuCategory } from "./menuSlice";
+
 interface MenuCategoryProps {
   category: IMenuCategory;
 }
